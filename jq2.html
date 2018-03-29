@@ -1,0 +1,28 @@
+<p>Hello Test</p>
+
+<button class="btn">Enter</button>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$("p").css("border","1px solid");
+
+		$(".btn").click(function(){
+			//$("p").empty();
+			//$("p").text("New data");
+			//$("p").html("<b>New data</b>");
+			//$("p").hide();
+			//$("p").css("display","none");
+			//$("p").fadeOut(2000);
+			//$("p").slideUp(2000);
+			//$("p").append("<b>New</b>");
+			//$("p").prepend("<b>New</b>");
+			//$("p").after("<b>New</b>");
+			//$("p").before("<b>New</b>");
+			$("p").width(100).height(100).animate({
+				"margin-left":"300px"
+			},2000);
+		});
+	});
+</script>

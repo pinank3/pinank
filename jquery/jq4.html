@@ -1,0 +1,29 @@
+<input type="text" class="text1">
+<input type="text" class="text2">
+<p>Hello test</p>
+<button class="btn">Enter</button>
+
+<script src="jquery-3.3.1.min.js"></script>
+
+<script >
+	$(document).ready(function(){
+		$(".btn").click(function(){
+			//console.log($("text1").val().length);
+			if($(".text1").val().length ==0){
+				$("p").text("empty first");
+			}
+			else if($(".text2").val().length ==0){
+				$("p").text("empty second");
+			}
+			else{
+			if(isNaN($(".text1").val()) || isNaN($(".text2").val())){
+				$("p").text("string provided");
+			}
+			else{
+				$("p").text(isNaN($(".text1").val())+isNaN($(".text2").val()))
+			}
+		}
+
+		});
+	});
+</script>

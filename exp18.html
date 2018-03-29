@@ -1,0 +1,12 @@
+<script>
+
+	password="hI1234@#";
+
+	pattern=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[@#]).{4,8}$/;
+
+	result=pattern.test(password);
+
+	document.write(password);
+
+	alert(result);
+</script>

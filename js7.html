@@ -1,0 +1,17 @@
+<script>
+	function check() {
+		//console.log(document);
+		//console.log(document.getElementById('divdata'));
+		//document.getElementById('divdata').innerHTML='Newdata';
+
+		//console.log(document.getElementsByClassName("divrec"));
+		document.getElementsByClassName("divrec")[0].innerHTML ="Newdata";
+		document.getElementsByClassName("divrec")[1].style.background="#eee";
+
+	}
+</script>
+
+<div id='divdata' class="divrec">Test1</div>
+<div id='divdata' class="divrec">Test2</div>
+
+<button onclick="check()">Enter</button>
