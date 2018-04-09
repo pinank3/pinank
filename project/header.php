@@ -1,10 +1,6 @@
 <?php
-	if(session_id() == "")
-	{
-		session_start();
-	}
-	// print_r($_SESSION);
-	$conn = new mysqli("localhost","root","","pinank");
+	require_once 'dbconnect.php';
+	require_once'dbfunction.php'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -145,8 +141,9 @@
                                     	if($_SESSION['pro_status']==1):
                                     	?>
                                         <li><a href="category.php">Add Category</a></li>
+                                        <li><a href="show_category.php">Show Category</a></li>
 										<li><a href="brand.php">Add Brand</a></li> 
-										<li><a href="checkout.html">Add Product</a></li> 
+										<li><a href="product.php">Add Product</a></li> 
 										<?php
 										endif;
 										?>

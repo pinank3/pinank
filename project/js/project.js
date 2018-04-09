@@ -117,4 +117,56 @@ $(document).ready(function () {
 			}
 		})
 	})
+
+		$(".btn-cat-del").click(function(){
+			if(confirm("Do you want to Delete ?"))
+			{
+			// alert(1);
+			curEle= $(this);
+			result= $(this).attr("for");
+			// alert(result);
+			$.post("cat-del-action.php","catid="+result,function(response){
+				// console.log(response);
+				if(response=="ok"){
+					curEle.parent().parent().fadeOut(1000);
+
+				}
+			})
+		}
+	})
+$(".btn_product").click(function(){
+		// alert(1)
+
+		// from object
+		formObj = document.getElementById("product_form");
+		console.log(formObj);
+
+		// using from object pass data as on object
+		result = new FormData(formObj);
+		console.log(result)
+
+		// connectionType , processData
+		$.ajax({
+			type:"post",
+			data:result,
+			url:"product_action.php",
+			contentType:false,
+			processData:false,
+			success:function(response){
+				// console.log(response)
+				if(response == "ok"){
+					$(".msg").html("Product Added");
+					$("#product_form")[0].reset();
+				}
+				else{
+				$(".msg").html(response);
+				}
+			},
+			error:function(errResponse){
+				console.log(errResponse)
+			}
+		})
+	});
+	
+		
 });

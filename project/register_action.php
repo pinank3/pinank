@@ -1,5 +1,5 @@
 <?php 
-	$conn = new mysqli("localhost","root","","pinank");
+	require_once 'dbconnect.php';
 	if(empty($_POST['user_name'])){
 		$msg="Please enter name";
 	}

@@ -1,8 +1,5 @@
 <?php
-	session_start();
-	$conn =new mysqli("localhost","root","","pinank");
-	// print_r($_POST);
-	// print_r($_SESSION);
+	require_once 'dbconnect.php';
 	 if(empty($_POST['user_password'])||empty($_POST['user_cpassword'])||$_POST['user_password']!=$_POST['user_cpassword']){
 	 	echo "please enter valid password";
 

@@ -1,7 +1,5 @@
 <?php 
-	session_start();
-	$conn= new mysqli("localhost","root","","pinank");
-	// print_r($_POST);
+	require_once 'dbconnect.php';
 	 if(empty($_POST['cpass'])||empty($_POST['npass'])||empty($_POST['cnpass'])){
 		$msg="Please enter all password";
 	}

@@ -1,7 +1,5 @@
 <?php
-session_start();
-$conn =new mysqli("localhost","root","","pinank");
-// print_r($_POST); 
+require_once 'dbconnect.php';
 if(empty($_POST['user_email'])){
 	echo "please enter emailid";
 }else{

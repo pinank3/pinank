@@ -1,6 +1,5 @@
 <?php
-$conn = new mysqli("localhost","root","","pinank");
-// print_r($_POST);
+require_once 'dbconnect.php';
 	if(empty($_POST['brand_name'])){
 		echo "Please enter brand name";
 	}
